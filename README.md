@@ -21,3 +21,4 @@
 |22.01.18| |[L2. 전화번호 목록](!https://programmers.co.kr/learn/courses/30/lessons/42577)|🟢|🟢|
 |22.01.18| |[L2. 위장](!https://programmers.co.kr/learn/courses/30/lessons/42578)|🟢|🟢|
 |22.01.18| |[L2. 베스트 앨범](!https://programmers.co.kr/learn/courses/30/lessons/42579)|🟡|🟢|
+|22.01.19|스택/큐|[L2. 기능개발](!https://programmers.co.kr/learn/courses/30/lessons/42586)| | |
