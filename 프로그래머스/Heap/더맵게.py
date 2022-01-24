@@ -12,4 +12,4 @@ def solution(scoville, K):
             return -1
     return answer
   
-  # heap을 직접 구현해서 풀어바야 하나?
+  # heap을 직접 구현해서 풀어바야 헐까?? 그래여지..
