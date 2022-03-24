@@ -14,7 +14,7 @@ var q : [((Int, Int,Int), Int)] = [((0,0,1),1)]
 visited[0][0][1] = 1
 var index = 0
 while q.count > index {
-    let node = q[index]
+    let node = q[index] //removefirst는 시간초과 발생
     let x = node.0.0
     let y = node.0.1
     let depth = node.0.2
