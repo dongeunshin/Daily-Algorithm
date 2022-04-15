@@ -1,0 +1,44 @@
+from datetime import datetime
+
+def check(m,n):
+    if m in n:
+        return True
+    return False
+
+def get_new_m(arr):
+    tmp = []
+    for w in arr:
+        if w == '#':
+            tmp[-1] += '#'
+            continue
+        tmp.append(w)
+    for i in range(len(tmp)):
+        if tmp[i][-1] == '#':
+            tmp[i] = tmp[i][0].lower()
+    return tmp
+
+def get_music(music):
+    t = []
+    for mu in music:
+        if mu == '#':
+            t[-1] = t[-1].lower()
+            continue
+        t.append(mu)    
+    return ''.join(t)
+
+def solution(music, musicinfos):
+    answer = []
+    pre_diff_sec = 0
+    music = get_music(music)
+    for m in musicinfos:
+        m = m.split(',')
+        diff_sec = (datetime.strptime(m[1],"%H:%M") - datetime.strptime(m[0],"%H:%M")).seconds // 60
+        entire_music = get_new_m(m[3])
+        
+        n = ''.join((entire_music * diff_sec)[:diff_sec])
+        if check(music,n) and diff_sec > pre_diff_sec:
+            pre_diff_sec = diff_sec
+            answer = [m[2],diff_sec]
+    if answer:
+        return answer[0]
+    return '(None)'
